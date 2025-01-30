@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&displays=swap');
 body {
-    background-color: rgb(250, 250, 248);
-
-}
-*{
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto',sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
 }
 nav {
     display: flex;
@@ -48,7 +51,7 @@ nav .menu a:hover {
 
 .home {
     height: calc(100vh - 55px);
-    background: url("images/R\ \(11\).jpg");
+    background: url(images/femme-gaie-louant-nouvelle-voiture_251859-2895\ \(1\).avif);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -94,138 +97,64 @@ nav .menu a:hover {
     color: #fff;
     letter-spacing: 1px;
 }
-.Nous h1{
-text-align:center ;
-margin-top: 30px;
-}
-.serve p{
-text-align: center;
-}
-.serve h1{
-    text-align: center;
-}
-    /* catégories */
 
-.services {
-    padding: 0 50%;
-}
-.title {
-    text-align:center ;
-    margin-top: 50px;
-    font-size: 35px;
-    letter-spacing: 1px;
-}
-.sub-title {
-    text-align: center;
-    color: #000;
-    margin: 20px 0;
-}
-.categories {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-}
-.category {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    padding: 15px;
-}
-.category img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-.category h3 {
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #000;
-    font-size: 18px;
-
-}
-.category a {
-    background-color: #0078d7;
-    color: white;
-    border: 18px;
-    padding: 3px 8px;
-    margin: 10px 0;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top:160px ;
-    text-decoration: none;
-    
-}
-
-.category a:hover {
-    background-color: #005bb5;
-}
-.categories p {
-    font-size: 14;
-    margin-bottom: 10px;
-}
-header {
-    text-align: center;
-    color: #000;
-    padding: 2rem 1rem;
-}
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-header p {
-    margin: 0.5rem 0 0;
-    font-size: 1.2rem;
-}
 main {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 1rem;
 }
-.service-grid {
+.model-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
-.service-card {
+.model-card {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+    overflow: hidden;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.service-card:hover {
+.model-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-.service-card img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    margin-bottom: 1rem;
+.model-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
-.service-card h3 {
+.model-card h3 {
     margin: 0.5rem 0;
     font-size: 1.5rem;
 }
-.service-card p {
-    margin: 0;
+.model-card p {
+    margin: 0 1rem 1rem;
     color: #555;
 }
-/* footer */
+.model-card button {
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.model-card button:hover {
+    background-color: #005bb5;
+}
+    
+    /* footer */
 footer {
     padding: 0 15px;
 }
 
 footer .title {
     margin-bottom: 20px;
+    text-align: center;
 }
 .contact {
     display: flex;
@@ -279,7 +208,29 @@ font-size: 15px;
 padding: 10px 0;
 color: #fff;
 } 
-.presntation A {
-   text-align: center; 
-   background-color: #005bb5;
+.container {
+    display: flex;
+    justify-content: center; /* Centre les cartes */
+    gap: 20px;
+    overflow-x: auto; /* Permet le défilement horizontal si l'écran est trop petit */
+    padding: 20px;
+}
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 250px; /* Réduit un peu la largeur pour que tout tienne sur un écran */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* Empêche les cartes de rétrécir */
+}
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.card-content {
+    padding: 15px;
+}
+.card h3 {
+    margin: 10px 0;
 }

@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1Opx 5%;
+}
+.logo {
+    font-size: 25px;
+}
+.logo span {
+    color: #93d6d0;
+}
+nav .menu a {
+    position: relative;
+    margin: 0 10px;
+    text-decoration: 0;
+    color: #999;
+    transition: 0.5s;
+
+}
+nav .menu a:before {
+    position: absolute;
+    top: -2px;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #93d6d0;
+    transition: 0.5s;
+}
+nav .menu a:hover:before {
+    width: 100%;
+}
+nav .menu a:hover {
+    color: #000;
+}
+/* home */
+
+.home {
+    height: calc(100vh - 55px);
+    background: url(images/so-5d0a275966a4bda9655ac1f4-ph0.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 5%;
+    padding-bottom: 50px;
+}
+.home-infos {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 50px;
+    animation: anime 2s linear;
+}
+/* animation home-infos */
+
+@keyframes anime {
+    from{
+        transform: translateX(-600px);
+    }    
+}
+.home-infos h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.home-infos p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.home-infos a {
+    text-decoration: 0;
+    border: 2px solid #93d6d0;
+    color: "#93d6d0";
+    border-radius: 6px;
+    padding: 5px 20px;
+    margin-top: 5px;
+    font-weight: 400;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+.home-infos a:hover {
+    background-color: #93d6d0;
+    color: #fff;
+    letter-spacing: 1px;
+}
+header {
+    text-align: center;
+    background-color: #0078d7;
+    color: white;
+    padding: 2rem 1rem;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+}
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+label {
+    font-weight: bold;
+}
+input, textarea, button {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+textarea {
+    height: 150px;
+}
+button {
+    background-color: #0078d7;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+button:hover {
+    background-color: #005fa3;
+}
+.contact-info {
+    margin-top: 2rem;
+}
+.contact-info p {
+    margin: 0.5rem 0;
+}
+.end {
+    margin-top: 50px;
+    background-color: #333;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 0;
+    color: #fff;
+    } 
